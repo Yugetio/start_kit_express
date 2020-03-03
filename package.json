@@ -2,11 +2,11 @@
   "name": "example",
   "version": "1.0.0",
   "description": "",
-  "main": "./bin/www.js",
+  "main": "./src/bin/www.js",
   "scripts": {
-    "node": "node ./bin/www.js",
-    "dev": "env-cmd -f ./keys/dev.env nodemon ./bin/www.js",
-    "test": "env-cmd -f ./keys/test.env jest"
+    "start": "node ./src/bin/www.js",
+    "dev": "env-cmd -f ./src/keys/dev.env nodemon ./src/bin/www.js",
+    "test": "env-cmd -f ./src/keys/test.env jest"
   },
   "jest": {
     "testEnvironment": "node",
@@ -27,8 +27,7 @@
     "express": "^4.17.1",
     "express-validator": "^6.4.0",
     "helmet": "^3.21.3",
-    "mongoose": "^5.9.2",
-    "morgan": "^1.9.1"
+    "mongoose": "^5.9.2"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.21.0",
@@ -39,6 +38,7 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.20.1",
     "jest": "^25.1.0",
+    "morgan": "^1.9.1",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1",
     "supertest": "^4.0.2",
