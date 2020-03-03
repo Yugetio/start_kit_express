@@ -1,7 +1,9 @@
 const express = require('express');
+const path = require('path');
+
 const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
-const swaggerDocument = YAML.load('./src/swagger.yaml');
+const swaggerDocument = YAML.load(path.join(__dirname, 'swagger.yaml'));
 
 // const compression = require('compression'); //for prod
 // const helmet = require('helmet');
